@@ -98,7 +98,7 @@
     return formatDays;
 }
 
-- (NSMutableArray *)slice:(NSMutableArray *)input intoSections:(NSUInteger)chunk {
+- (NSMutableArray *)sliceObjects:(NSMutableArray *)input intoSections:(NSUInteger)chunk {
     NSMutableArray *output = [[NSMutableArray alloc] init];
     NSUInteger count = [input count];
     float sections = (float) count / chunk;
@@ -143,7 +143,7 @@
 
     days = [self insertObjects:0 toDays:days withCount:daysOffset];
     days = [self formatDays:days];
-    days = [self slice:days intoSections:7];
+    days = [self sliceObjects:days intoSections:7];
 
     return [days componentsJoinedByString:@"\n"];
 }
