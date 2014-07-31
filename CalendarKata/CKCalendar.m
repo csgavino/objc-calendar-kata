@@ -19,7 +19,6 @@
 @implementation CKCalendar
 
 - (id)initWithYear:(NSUInteger)year andMonth:(NSUInteger)month {
-    self = [super init];
     return [self initWithYear:year withMonth:month andStartWeekOn:1];
 }
 
